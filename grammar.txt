@@ -1,0 +1,12 @@
+Grammar
+
+<expr> :=   <term> |
+            <expr> + <term> |
+            <expr> - <term>
+<term> :=   <primary> |
+            <term> * <primary> |
+            <term> / <primary>
+<primary> := <number> | <roll>
+<number> : = integer literal
+<roll> := [<number>]"d"<number>["x"][<qualifier>]
+<qualifier> := ("drop"|"keep")<number>("lowest"|"highest")
